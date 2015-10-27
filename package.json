@@ -2,7 +2,7 @@
   "name": "photon-app",
   "version": "0.1.0",
   "description": "Photon test app",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
     "start": "electron ."
   },
