@@ -1,17 +1,20 @@
-var remote = require('remote');
-var Menu = remote.require('menu');
-var MenuItem = remote.require('menu-item');
+var app = require('app');
+var MusicPlayer = require('musicplayer-api').MusicPlayer;
+var dialog = require('dialog');
 
 
+app.on('ready', function(){
 
-function createMenu() {
-  var menu = new Menu();
-  menu.append(new MenuItem({label: "About & Licenses", click: function() {
-    alert('About page opened');
-  }}));
+  app.on('closed', function() {
+    win = null;
+  });
 
-  window.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    menu.popup(remote.getCurrentWindow());
-  }, false);
-}
+  player = new MusicPlayer();
+
+  var tracks = dialog.showOpenDialog(win, {properties: ['openFile', 'multiSelections']})
+
+  for (var i = 0; i < tracks.length; i++) {
+    player.addTrack(tracks[i]);
+  }
+
+});
