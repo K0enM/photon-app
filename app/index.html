@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/photon.css" type="text/css">
-    <title>Muziek Speler</title>
+    <link rel="stylesheet" href="css/custom.css" type="text/css">
+    <title>Play & Pause</title>
   </head>
-  <body>
+  <body onload="createMenu">
     <div class="window">
       <div class="window-content">
         <ul class="list-group pull-left">
@@ -31,14 +32,13 @@
 
       </div>
 
-      <footer class="toolbar toolbar-footer title" style="height: 15%;">
-        <span class="icon icon-to-end title"></span>
-        <span class="icon icon-fast-backward title"></span>
-        <span class="icon icon-play title"></span>
-        <span class="icon icon-pause title"></span>
-        <span class="icon icon-fast-forward title"></span>
-        <span class="icon icon-to-end title"></span>
+      <footer class="toolbar toolbar-footer title">
+        <img src="images/play.png" class="play"/>
+        <img src="images/pause.png" class="pause"/>
+
+        <div>Icons made by <a href="http://www.flaticon.com/authors/sherzod-mirzaakhmedov" title="Sherzod Mirzaakhmedov">Sherzod Mirzaakhmedov</a>, <a href="http://www.flaticon.com/authors/tracy-tam" title="Tracy Tam">Tracy Tam</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
       </footer>
     </div>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>

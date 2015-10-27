@@ -1,0 +1,12 @@
+footer {
+  height: 15%;
+}
+
+img {
+  margin-top: 9px;
+  margin-right: 3px;
+}
+
+img:hover {
+  cursor: pointer;
+}
